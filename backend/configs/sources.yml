@@ -1,0 +1,9 @@
+rss:
+  - name: "DemoFeed"
+    url: "https://hnrss.org/frontpage"
+
+apis: []
+
+files:
+  - name: "LocalNote"
+    path: "inputs/sample.txt"

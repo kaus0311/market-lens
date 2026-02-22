@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Stock Insights Pro",
+  "version": "1.0.0",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://robinhood.com/*",
+    "https://api.finnhub.io/*"
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content.js-BHVRHCfK.js"
+      ],
+      "matches": [
+        "https://robinhood.com/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://robinhood.com/*"
+      ],
+      "resources": [
+        "assets/content.js-BHVRHCfK.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
