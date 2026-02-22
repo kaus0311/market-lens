@@ -1,0 +1,1 @@
+chrome.tabs.onUpdated.addListener((s,c,e)=>{if(c.url&&c.url.includes("robinhood.com/stocks/")){const t=c.url.match(/\/stocks\/([A-Z0-9]+)/);if(t){const o=t[1];console.log(`[Background] URL changed to: ${o}`),chrome.tabs.sendMessage(s,{action:"updateTicker",ticker:o}).catch(()=>{})}}});
